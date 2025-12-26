@@ -6,9 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-gray-950 text-white">
+
+  <!-- BANNER ROTATIVO -->
+  <div class="w-full bg-red-600 h-5 overflow-hidden relative">
+    <div id="banner-text" class="absolute w-full text-center text-white text-sm font-medium">
+      Verified & Tested
+    </div>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="flex justify-between items-center px-8 py-6">
@@ -34,6 +44,7 @@
     <div id="product-list" class="grid md:grid-cols-3 gap-6"></div>
   </section>
 
-  <script src="app.js"></script>
+  <script src="banner.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
