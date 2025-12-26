@@ -17,8 +17,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "node node_modules/tailwindcss/lib/cli.js -i ./src/css/index.css -o ./dist/css/style.css --minify",
-    "watch:css": "node node_modules/tailwindcss/lib/cli.js -i ./src/css/index.css -o ./dist/css/style.css --watch"
+    "build:css": "tailwindcss -i ./src/css/index.css -o ./dist/css/style.css --minify",
+    "watch:css": "tailwindcss -i ./src/css/index.css -o ./dist/css/style.css --watch"
   },
   "repository": {
     "type": "git",
