@@ -18,7 +18,7 @@ fetch(`https://api.billgang.com/v1/shops/${SHOP_ID}/products`, {
         <p class="mt-4 font-bold">${product.price} €</p>
         <a href="${product.checkout_url}"
            class="block mt-4 bg-indigo-600 text-center py-2 rounded-lg hover:opacity-90">
-          Comprar algo
+          Comprar
         </a>
       </div>
     `;
