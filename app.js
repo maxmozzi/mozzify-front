@@ -1,9 +1,13 @@
 fetch("/.netlify/functions/getProducts")
   .then(res => res.json())
   .then(data => {
+    console.log(data); // <- así vemos qué devuelve la API
     const container = document.getElementById("product-list");
 
-    data.products.forEach(product => {
+    // Ajusta según la estructura que devuelva Billgang
+    const products = data.products || data.data || []; 
+
+    products.forEach(product => {
       container.innerHTML += `
         <div class="bg-gray-900 p-6 rounded-xl">
           <h4 class="text-xl font-semibold">${product.name}</h4>
@@ -16,4 +20,5 @@ fetch("/.netlify/functions/getProducts")
         </div>
       `;
     });
-  });
+  })
+  .catch(err => console.error("Error fetching products:", err));
