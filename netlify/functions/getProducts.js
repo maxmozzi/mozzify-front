@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 export async function handler(event, context) {
   const API_KEY = process.env.BILLGANG_API_KEY;
   const SHOP_ID = process.env.BILLGANG_SHOP_ID;
